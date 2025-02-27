@@ -1,0 +1,62 @@
+body {
+    background-color: #fff; /* Full white background */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.monitor {
+    width: calc(100vw - 40px); /* Full width minus 20px padding on each side */
+    height: calc(100vh - 40px); /* Full height minus 20px padding on each side */
+    background-color: #fff; /* White background */
+    border: 2px solid #000; /* Thin black border */
+    border-radius: 10px; /* Rounded corners */
+    position: relative;
+    overflow: hidden; 
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+#egg-person {
+    position: absolute;
+    left: 50px;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for image height */
+    width: 150px;
+}
+
+#egg-basket {
+    position: absolute;
+    right: 50px;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for image height */
+    width: 150px;
+    cursor: pointer;
+    user-select: none; /* Prevents accidental selection */
+    pointer-events: auto; /* Ensures it’s clickable */
+}
+
+#drag-egg {
+    position: absolute;
+    width: 50px;
+    pointer-events: none; /* Prevents interference with clicks */
+}
+
+#egg-counter {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: #000;
+}
